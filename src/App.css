@@ -44,3 +44,15 @@
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
     transition: 0.1s;
 }
+
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+
+  .like {
+    top: clamp(150px, 10vh, 250px);
+  }
+  
+  .love {
+    top: clamp(350px, 30vh, 500px);
+  }
+}
