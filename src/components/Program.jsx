@@ -1,35 +1,19 @@
-// src/components/Program.jsx
-import React from 'react';
-// 1. Impor 'motion' dari framer-motion
-import { motion } from 'framer-motion';
-import CD from '../assets/CDhal3.png';
-import M from '../assets/Mhal3.png';
-import SS from '../assets/SShal3.png';
-import SC from '../assets/SChal3.png';
-import S from '../assets/SEhal3.png';
-import ProgramCard from './ProgramCard';
+import React from 'react'
 
 function Program() {
-  const program = [
-    { id: 1, title: 'Social Education', img: S },
-    { id: 2, title: 'Sharing Session', img: SS },
-    { id: 3, title: 'Movements', img: M },
-    { id: 4, title: 'Creative Media', img: CD },
-    { id: 5, title: 'Short Course', img: SC },
-  ];
-
   return (
-    <section className="w-screen h-auto text-white flex-col items-center text-center p-8 overflow-hidden">
-      <h2 className="text-xl font-[helvetica] text-white lg:text-4xl"><strong>Our Program</strong></h2>
-      
-      <div className="p-4 flex flex-row flex-wrap justify-center gap-4 mt-4">
-        {program.map((item, index) => (
-          // Gunakan ProgramCard dan teruskan 'item' serta 'index'
-          <ProgramCard key={item.id} item={item} index={index} />
-        ))}
-      </div>
+    <section className='w-screen h-screen font-[helvetica] flex flex-col items-center justify-center gap-8 p-8 pt-36 lg:pt-40'>
+        <h2 className='text-white text-2xl lg:text-4xl'><strong>Program</strong></h2>
+        <div className='w-7/8 h-5/8 bg-white/10 rounded-[15px]'>
+
+        </div>
+        <button className="bg-white/10 border border-white/20 text-white font-semibold px-6 py-3 pb-4 rounded-full hover:bg-white/20 transition-colors duration-300 w-full sm:w-auto
+      lg:w-96
+      ">
+                    Dive Into Our Program
+                </button>
     </section>
-  );
+  )
 }
 
-export default Program;
+export default Program

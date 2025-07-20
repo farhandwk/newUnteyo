@@ -7,6 +7,8 @@ import About from './components/About';
 import Program from './components/Program';
 import Connect from './components/Connect';
 import BackgroundScroll from './components/BackgroundScroll';
+import EventComing from './components/EventComing';
+import  PastEvent from "./components/PastEvent"
 import Footer from "./components/Footer"
 import './App.css';
 
@@ -15,7 +17,7 @@ function App() {
   const scrollTargetRef = useRef(null);
 
   return (
-    <main className="w-full bg-black">
+    <main className="w-full bg-black max-w-screen">
       <Header></Header>
       <Landing />
 
@@ -25,6 +27,8 @@ function App() {
         <div className="relative z-10">
           <About />
           <Program />
+          <EventComing/>
+          <PastEvent/>
         </div>
       </div>
       <Connect />

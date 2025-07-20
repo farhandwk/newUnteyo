@@ -2,6 +2,9 @@
 
 import DropdownNavDekstop from "./DropdownNavDesktop";
 import logo from "../assets/logo.png"
+import instagram from "../assets/instagramHeader.png"
+import tiktok from "../assets/tiktokHeader.png"
+import youtube from "../assets/youtubeHeader.png"
 import hamburger from "../assets/ham.png"
 import { useEffect, useState } from "react";
 import "../App.css"
@@ -11,8 +14,9 @@ import MobileNav from "./MobileNav";
 // Data
 const companyItems = [
   { id: 1, title: "About Us", link: "#" },
-  { id: 2, title: "Careers", link: "#" },
-  { id: 3, title: "Partners", link: "#" },
+  { id: 2, title: "Our Program", link: "#" },
+  { id: 3, title: "Careers", link: "#" },
+  { id: 4, title: "Contact Us", link: "#" },
 ];
 
 const eventItems = [
@@ -23,10 +27,15 @@ const eventItems = [
 ];
 
 const postItems = [
-  { id: 1, title: "Articles", link: "#" },
-  { id: 2, title: "Press Release", link: "#" },
-  { id: 3, title: "Blog", link: "#" },
+  { id: 1, title: "Creative Media", link: "#" },
+  { id: 2, title: "Student News", link: "#" },
 ];
+
+const socialMedia = [
+  {id: 1, img: instagram},
+  {id: 2, img: tiktok},
+  {id: 3, img: youtube},
+]
 
 const comingSoonContent = (
   <div className="text-center text-xs text-white bg-black w-[120px] h-[180px] rounded-lg flex flex-col justify-center p-2">
@@ -55,23 +64,30 @@ export default function Header() {
   return (
     <>
       <nav 
-        className={`Helvetica text-white w-full px-4 sm:px-8 py-4 flex flex-row justify-between items-center z-[99] fixed top-0 transition-colors duration-300 max-h-20 md:max-h-none ${
+        className={`Helvetica text-white w-screen px-4 sm:px-8 py-4 flex flex-row justify-between items-center z-[99] fixed top-0 transition-colors duration-300 max-h-20 md:max-h-20 ${
           isScrolled || isSidebarOpen ? "scrolled" : ""
         }`} 
       >
-        <img src={logo} className="w-[74px] h-[80px] " alt="Logo"/>
-        
-        {/* 5. Navigasi Desktop: Gunakan 'lg:flex' agar hanya tampil di layar besar */}
-        <div className="hidden lg:flex flex-row items-center gap-[100px] p-[30px]">
-          <DropdownNavDekstop label="Company" items={companyItems} align="left"/>
-          <DropdownNavDekstop label="Event" items={eventItems} leftContent={comingSoonContent} align="center"/>
-          <DropdownNavDekstop label="Post" items={postItems} align="right"/>
-        </div>
-
         {/* 6. Tombol Menu Mobile: Gunakan 'lg:hidden' agar hanya tampil di layar kecil */}
         <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="lg:hidden">
           <img src={hamburger} ></img>
         </button>
+        <div className="flex flex-row items-center justify-center">
+          <img src={logo} className="w-[74px] h-[80px] " alt="Logo"/>
+        
+          <div className="hidden lg:flex flex-row items-center gap-[100px] p-[30px]">
+            <DropdownNavDekstop label="Company" items={companyItems} align="left"/>
+            <DropdownNavDekstop label="Event" items={eventItems} leftContent={comingSoonContent} align="center"/>
+            <DropdownNavDekstop label="Post" items={postItems} align="right"/>
+          </div>
+        </div>
+        <div className="flex flex-row">
+          {socialMedia.map((item) => (
+            <img src={item.img} key={item.id}></img>
+          ))}
+        </div>
+
+        
       </nav>
       
       {/* 7. Render komponen sidebar di sini */}

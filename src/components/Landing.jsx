@@ -29,64 +29,21 @@ function Landing() {
             overflow: 'hidden'
         }}></div>
         <WaveDot className='absolute '></WaveDot>
-        {/* <div className='absolute z-[1] top-[30%] w-screen flex flex-col justify-between h-[40vh]'>
-            {twinimg.map((item) => (
-                <img src={item.img} key={item.id}
-                className={`w-14 relative ${item.id % 2 === 0 ? "left-[60%]" : "left-[5%]"}`}
-                ></img>
-            ))}
-        </div> */}
-        {/* <img
-            className="
-            like
-            absolute
-            w-[55px]
-            left-[8vw] top-[30vh]
-
-            md:w-[80px] 
-            lg:w-[100px]
-            lg:top-[37vh]
-            "
-            src={like}
-            alt="Like icon"
-            style={{
-                animation: "bounce 1.8s ease-in-out infinite"
-            }}
-        />
-        
-        <img
-            className="
-            love
-            absolute
-            w-[60px]
-            left-[80vw] top-[60vh]
-
-            md:w-[80px]
-            
-            lg:w-[100px]
-            lg:top-[60vh]
-            "
-            src={love}
-            alt="Love icon"
-            style={{
-                animation: "bounce 1.8s ease-in-out infinite"
-            }}
-        /> */}
         <div className='flex flex-col justify-center items-center pt-[50%] relative z-[1] gap-8 md:gap-2 md:pt-[10%] lg:gap-8'>
-            <div className='flex flex-row justify-start pl-4 w-full lg:pl-56'>
-                <img src={like} className='w-16 relative lg:w-26'></img>
+            <div className='flex flex-row justify-start pl-4 w-full lg:pl-48'>
+                <img src={like} className='w-16 relative lg:w-20'></img>
             </div>
             <div className=' flex flex-col justify-center items-center relative z-[1] md:gap-2 lg:gap-8'>
-                <h1 className='font-[Helvetica] text-4xl md:text-7xl lg:text-9xl'><strong>Unteyo Journey</strong></h1>
+                <h1 className='font-[Helvetica] text-4xl md:text-7xl lg:text-8xl'><strong>Unteyo Journey</strong></h1>
                 <span className='font-[Helvetica] text-lg md:text-2xl  lg:text-3xl'>Greetings Quality Students</span>
             </div>
-            <div className='flex flex-row justify-end pl-4 w-full lg:pr-56'>
-                <img src={love} className='w-16 relative lg:w-26 '></img>
+            <div className='flex flex-row justify-end pl-4 w-full lg:pr-48'>
+                <img src={love} className='w-16 relative lg:w-20 '></img>
             </div>
         </div>
         <button className='
         border-white border-2 w-[80%] self-center rounded-[10px] mt-[30%] h-[50px] font-[Helvetica] text-sm hover:text-black hover:bg-[white] 
-        lg:w-[40%] lg:h-[80px] lg:mt-[5%] lg:rounded-[20px] 
+        lg:w-[35%] lg:h-[60px] lg:mt-[2%] lg:rounded-[15px]  font-[helvetica] cursor-pointer
         ' style={{
             transition: "all 0.5s"
         }}>Explore Our Journey</button>

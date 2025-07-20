@@ -11,6 +11,25 @@ const MobileNav = ({ isOpen, setIsOpen }) => {
     { title: 'News', link: '/news' },
     // Tambahkan item lain jika ada
   ];
+
+  const companyItems = [
+    { id: 1, title: "About Us", link: "#" },
+    { id: 2, title: "Our Program", link: "#" },
+    { id: 3, title: "Careers", link: "#" },
+    { id: 4, title: "Contact Us", link: "#" },
+  ];
+
+  const eventItems = [
+    { id: 1, title: "Social Education", link: "#" },
+    { id: 2, title: "Sharing Session", link: "#" },
+    { id: 3, title: "Movement", link: "#" },
+    { id: 4, title: "All Events", link: "#" },
+  ];
+
+  const postItems = [
+    { id: 1, title: "Creative Media", link: "#" },
+    { id: 2, title: "Student News", link: "#" },
+  ];
   
   const sidebarVariants = {
     closed: { x: '100%' },
@@ -27,12 +46,12 @@ const MobileNav = ({ isOpen, setIsOpen }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)}
-            className="fixed inset-0 bg-black/50 z-40"
+            className="fixed inset-0 z-40"
           />
 
           {/* Sidebar */}
           <motion.div
-            className="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-gray-900 text-white p-8 pt-24 z-50"
+            className="fixed bottom-0 right-0 h-full w-3/4 max-w-sm bg-white text-black p-8 pt-24 z-100"
             variants={sidebarVariants}
             initial="closed"
             animate="open"
@@ -40,16 +59,31 @@ const MobileNav = ({ isOpen, setIsOpen }) => {
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           >
             <h2 className="text-2xl font-bold mb-8">Menu</h2>
-            <nav>
-              <ul className="space-y-4">
-                {navItems.map((item) => (
-                  <li key={item.title}>
-                    <a href={item.link} className="text-lg hover:text-gray-300" onClick={() => setIsOpen(false)}>
-                      {item.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            <nav className='font-[Helvetica] flex flex-col gap-4'>
+              <section>
+                <h3 className='text-lg mb-2'><strong>Company</strong></h3>
+                <div className='flex flex-col gap-1'>
+                  {companyItems.map((item) => (
+                    <a key={item.id} href={item.link} className='text-sm'>{item.title}</a>
+                  ))}
+                </div>
+              </section>
+              <section>
+                <h3 className='text-lg mb-2'><strong>Program</strong></h3>
+                <div className='flex flex-col gap-1'>
+                  {eventItems.map((item) => (
+                    <a key={item.id} href={item.link} className='text-sm'>{item.title}</a>
+                  ))}
+                </div>
+              </section>
+              <section>
+                <h3 className='text-lg mb-2'><strong>Post</strong></h3>
+                <div className='flex flex-col gap-1'>
+                  {postItems.map((item) => (
+                    <a key={item.id} href={item.link} className='text-sm'>{item.title}</a>
+                  ))}
+                </div>
+              </section>
             </nav>
           </motion.div>
         </>

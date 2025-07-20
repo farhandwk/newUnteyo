@@ -37,6 +37,7 @@
 }
 
 .scrolled {
+    background-color: #000000b3;
     backdrop-filter: blur(10px);
 }
 
@@ -55,4 +56,18 @@
   .love {
     top: clamp(350px, 30vh, 500px);
   }
+}
+
+/* Kelas untuk elemen yang scrollbar-nya ingin disembunyikan */
+.hide-scrollbar {
+  /* Untuk Firefox */
+  scrollbar-width: none;
+  
+  /* Untuk Internet Explorer dan Edge versi lama */
+  -ms-overflow-style: none;
+}
+
+/* Untuk Chrome, Safari, dan browser berbasis WebKit lainnya */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

@@ -28,7 +28,7 @@ function Connect() {
   };
 
   return (
-    <div className="relative min-h-screen md:min-h-[0] lg:min-h-screen py-16 overflow-hidden">
+    <div className="relative min-h-screen md:min-h-[0] lg:min-h-screen py-16 overflow-hidden font-[helvetica] pt-30 lg:pt-40">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial="hidden"
@@ -38,15 +38,15 @@ function Connect() {
         >
           <motion.h2
             variants={itemVariants}
-            className="HelveticaBold text-4xl md:text-6xl font-extrabold text-white tracking-tight"
+            className="font-[helvetica] text-4xl md:text-6xl font-extrabold text-white tracking-tight"
           >
-            Let's Connect
+            <strong>Let's Connect</strong>
           </motion.h2>
           <motion.h3
             variants={itemVariants}
-            className="HelveticaBold text-3xl md:text-5xl lg:text-5xl font-bold text-white  inline-block px-4 py-2"
+            className="font-[helvetica] text-3xl md:text-5xl lg:text-5xl font-bold text-white  inline-block px-4 py-2"
           >
-            with Us
+            <strong>with Us</strong>
           </motion.h3>
         </motion.div>
 
