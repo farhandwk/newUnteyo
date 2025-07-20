@@ -11,7 +11,7 @@ function Landing() {
     ]
 
   return (
-    <section className='text-[white] w-[100vw] h-auto flex flex-col justify-center p-4  overflow-hidden relative overflow-hidden'
+    <section className='text-[white] w-[100vw] h-screen flex flex-col justify-center p-4  overflow-hidden relative overflow-hidden'
     style={{
         // Membuat 80% atas section berwarna hitam, lalu memudar ke transparan di bawah.
         background: 'linear-gradient(to bottom, black 85%, transparent)'
@@ -29,7 +29,7 @@ function Landing() {
             overflow: 'hidden'
         }}></div>
         <WaveDot className='absolute '></WaveDot>
-        <div className='flex flex-col justify-center items-center pt-[50%] relative z-[1] gap-8 md:gap-2 md:pt-[10%] lg:gap-8'>
+        <div className='flex flex-col justify-center items-center pt-[20%] relative z-[1] gap-8 md:gap-2 md:pt-[10%] lg:gap-8'>
             <div className='flex flex-row justify-start pl-4 w-full lg:pl-48'>
                 <img src={like} className='w-16 relative lg:w-20'></img>
             </div>

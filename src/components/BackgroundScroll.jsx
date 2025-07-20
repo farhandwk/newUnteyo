@@ -5,8 +5,6 @@ import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const BackgroundScroll = ({ targetRef }) => {
-  // 2. Logika isScrolled Anda kita kembalikan
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
 
   useEffect(() => {
@@ -17,23 +15,12 @@ const BackgroundScroll = ({ targetRef }) => {
     window.addEventListener('resize', handleResize)
   }, [])
 
-  useEffect(() => {
-    const handleScroll = () => {
-      console.log(window.scrollY)
-      setIsScrolled(window.scrollY > 700);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   // Logika Framer Motion tetap ada untuk semua cahaya
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start end", "end start"]
   });
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [-1000, 1000]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [-150, 150]);
   const opacity3 = useTransform(scrollYProgress, [0, 0.5, 0.7, 1], [1 , 0.6, 0.4, 0]);
 
   return (
