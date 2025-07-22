@@ -75,7 +75,9 @@ export default function Header() {
             <img src={hamburger} ></img>
           </button>
           <div className="flex flex-row items-center justify-center">
-            <img src={logo} className="w-[74px] h-[80px] " alt="Logo"/>
+            <a href="/newUnteyo/">
+              <img src={logo} className="w-[74px] h-[80px] " alt="Logo"/>
+            </a>
           
             <div className="hidden lg:flex flex-row items-center gap-[100px] p-[30px] lg:gap-12 lg:pl-24">
               <DropdownNavDekstop label="Company" items={companyItems} leftContent={comingSoonContent} align="left"/>
