@@ -14,7 +14,7 @@ import MobileNav from "./MobileNav";
 
 // Data
 const companyItems = [
-  { id: 1, title: "About Us", link: "/aboutUnteyo/" },
+  { id: 1, title: "About Us", link: "/newUnteyo/aboutUnteyo/" },
   { id: 2, title: "Our Program", link: "#" },
   { id: 3, title: "Careers", link: "#" },
   { id: 4, title: "Contact Us", link: "#" },
