@@ -14,14 +14,14 @@ function About() {
 
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.4], 
+    [0, 0.2], 
     [0, 1]      
   );
 
   return (
     <section 
       ref={targetRef}
-      className="w-[100vw] h-auto p-12 pt-36 flex flex-col gap-10
+      className="w-[100vw] h-auto p-12 pt-24 flex flex-col gap-10
        lg:pt-48 lg:pl-[15%]
       "
     >
