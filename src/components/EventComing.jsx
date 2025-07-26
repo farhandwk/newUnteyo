@@ -72,8 +72,8 @@ function InteractiveGlassCard() {
             <h3 className="text-2xl text-white mb-2"><strong>Story of Pilmapres: Menjadi Mahasiswa Berprestasi Utama</strong></h3>
             <p className="text-white text-sm mb-4">Get ready to be the next inspiration!!</p>
             <div className="space-y-2">
-                <div className="flex items-center"><CalendarIcon className="w-5 h-5 text-gray-800" /><span className="text-white font-semibold ml-2 text-sm">DEC 16 2024</span></div>
-                <div className="flex items-center"><MapPinIcon className="w-5 h-5 text-gray-800" /><span className="text-white font-semibold ml-2 text-sm">Taman Kampus 1 UTY</span></div>
+                <div className="flex items-center"><CalendarIcon className="w-5 h-5 text-white" /><span className="text-white font-semibold ml-2 text-sm">DEC 16 2024</span></div>
+                <div className="flex items-center"><MapPinIcon className="w-5 h-5 text-white" /><span className="text-white font-semibold ml-2 text-sm">Taman Kampus 1 UTY</span></div>
             </div>
         </div>
       </div>

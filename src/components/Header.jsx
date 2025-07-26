@@ -88,7 +88,7 @@ export default function Header() {
         </div>
         <div className="flex flex-row gap-4">
           {socialMedia.map((item) => (
-            <img src={item.img} key={item.id}></img>
+            <img src={item.img} key={item.id} className="w-6"></img>
           ))}
         </div>
 

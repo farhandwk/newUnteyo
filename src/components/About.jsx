@@ -14,8 +14,8 @@ function About() {
 
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.6, 0.8], 
-    [0, 0.2, 1, 0]      
+    [0, 0.5], 
+    [0, 1]      
   );
 
   return (
