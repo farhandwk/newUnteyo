@@ -67,13 +67,13 @@ function InteractiveGlassCard() {
       <div className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-700 ${showHint ? 'opacity-100' : 'opacity-0'} md:group-hover:opacity-0 ${isOverlayVisible ? 'opacity-0' : ''}`}>
         <span className="text-white text-lg bg-black/40 px-4 py-2 rounded-lg">{hintText}</span>
       </div>
-      <div className={`absolute inset-0 w-full h-full p-6 pb-18 lg:p-6 flex flex-col justify-end items-start bg-white/20 backdrop-blur-lg border-t-2 border-white/40 transition-all duration-500 ease-in-out opacity-0 md:group-hover:opacity-100 ${isOverlayVisible ? 'opacity-100' : ''}`}>
+      <div className={`absolute inset-0 w-full h-full p-6 pb-18 lg:p-6 flex flex-col justify-end items-start bg-black/50 backdrop-blur-lg border-t-2 border-white/40 transition-all duration-500 ease-in-out opacity-0 md:group-hover:opacity-100 ${isOverlayVisible ? 'opacity-100' : ''}`}>
         <div className="transform md:group-hover:translate-y-0 translate-y-12 transition-transform duration-500 ease-in-out">
-            <h3 className="text-2xl text-gray-900 mb-2"><strong>Story of Pilmapres: Menjadi Mahasiswa Berprestasi Utama</strong></h3>
-            <p className="text-gray-800 text-sm mb-4">Get ready to be the next inspiration!!</p>
+            <h3 className="text-2xl text-white mb-2"><strong>Story of Pilmapres: Menjadi Mahasiswa Berprestasi Utama</strong></h3>
+            <p className="text-white text-sm mb-4">Get ready to be the next inspiration!!</p>
             <div className="space-y-2">
-                <div className="flex items-center"><CalendarIcon className="w-5 h-5 text-gray-800" /><span className="text-gray-900 font-semibold ml-2 text-sm">DEC 16 2024</span></div>
-                <div className="flex items-center"><MapPinIcon className="w-5 h-5 text-gray-800" /><span className="text-gray-900 font-semibold ml-2 text-sm">Taman Kampus 1 UTY</span></div>
+                <div className="flex items-center"><CalendarIcon className="w-5 h-5 text-gray-800" /><span className="text-white font-semibold ml-2 text-sm">DEC 16 2024</span></div>
+                <div className="flex items-center"><MapPinIcon className="w-5 h-5 text-gray-800" /><span className="text-white font-semibold ml-2 text-sm">Taman Kampus 1 UTY</span></div>
             </div>
         </div>
       </div>
