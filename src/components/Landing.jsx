@@ -13,7 +13,7 @@ function Landing() {
   return (
     <section className='text-[white] w-[100vw] h-screen flex flex-col justify-center p-4  overflow-hidden relative overflow-hidden'
     style={{
-        // Membuat 80% atas section berwarna hitam, lalu memudar ke transparan di bawah.
+
         background: 'linear-gradient(to bottom, black 85%, transparent)'
       }}
     >

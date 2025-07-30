@@ -190,7 +190,7 @@ const WaveAnimation = () => {
 
   return (
     <div className="">
-      <div ref={waveContainerRef} className="z-[0] relative top-[-30%]" />
+      <div ref={waveContainerRef} className="z-[0] relative top-[30%]" />
     </div>
   );
 };
