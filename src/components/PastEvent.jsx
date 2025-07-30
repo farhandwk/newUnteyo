@@ -19,7 +19,7 @@ function PastEvent() {
             setIsVisible(entry.isIntersecting);
           },
           {
-            threshold: 0.3, // 30% bagian elemen terlihat baru dianggap muncul
+            threshold: 0.3, 
           }
         );
       
@@ -119,6 +119,8 @@ function PastEvent() {
           container.removeEventListener("touchstart", disableLongPress);
         };
       }, []);
+      
+      
   return (
     <section className='w-screen h-auto p-4 font-[helvetica] flex flex-col items-center justify-center gap-8 pt-36 lg:pt-40'>
         <h2 className='text-white text-2xl lg:text-4xl'><strong>Past Events</strong></h2>

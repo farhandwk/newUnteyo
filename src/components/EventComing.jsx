@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion';
 import img from "../assets/eventNow.png"
 
-// Komponen Ikon untuk detail event
+
 const CalendarIcon = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -19,8 +19,6 @@ const MapPinIcon = ({ className }) => (
     </svg>
 );
 
-// Komponen utama untuk Kartu Glassmorphism
-// Tidak ada perubahan signifikan di sini, semua logika internal tetap sama
 function InteractiveGlassCard() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const [showHint, setShowHint] = useState(true);
@@ -84,32 +82,27 @@ function InteractiveGlassCard() {
 }
 
 function EventComing() {
-    // 1. Buat ref untuk menargetkan elemen yang akan dianimasikan
-    const ref = useRef(null);
 
-    // 2. Gunakan useScroll untuk melacak progress scroll dari elemen target
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end end"] // Animasi mulai saat bagian ATAS target masuk viewport, selesai saat bagian BAWAH target keluar viewport
-    });
-
-    // 3. Gunakan useTransform untuk memetakan progress scroll ke nilai opacity dan scale
-    // PERUBAHAN: Rentang opacity diubah dari [0.1, 1] menjadi [0, 1] untuk efek yang lebih jelas.
-    const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
-    // PERUBAHAN: Rentang scale diubah dari [0.9, 1] menjadi [0.8, 1] untuk efek zoom yang lebih dramatis.
-    const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
+  const AnimatedSection = ({ children }) => (
+    <motion.section
+      initial={{ opacity: 0, y: 50 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      viewport={{ once: true, amount: 0.3 }} 
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className='w-full h-full pt-0 flex flex-col items-center justify-center p-12 gap-2 lg:pl-[15%] pt-36 min-h-screen lg:pt-40'
+    >
+      {children}
+    </motion.section>
+  );
+  
+    
     
   return (
-    <motion.section 
-            ref={ref}
-            style={{ opacity, scale }} // Terapkan opacity yang sudah ditransformasi ke style
-            className="min-h-screen w-full flex flex-col items-center justify-center p-12 pt-36 font-[helvetica] text-white lg:pt-40"
-        >
+    <AnimatedSection>
             <div className="text-center mb-8">
                 <h1 className="text-2xl md:text-4xl text-white lg:text-4xl"><strong>Event Is Coming</strong></h1>
             </div>
             <InteractiveGlassCard />
-            {/* === Tombol-tombol baru ditambahkan di sini === */}
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-10 w-full max-w-xs sm:max-w-none justify-center">
                 <button className="bg-white/10 border border-white/20 text-white font-semibold px-6 py-3 rounded-full hover:bg-white/20 transition-colors duration-300 w-full sm:w-auto">
                     Register Now
@@ -121,7 +114,7 @@ function EventComing() {
                     Contact Admin
                 </button>
             </div>
-        </motion.section>
+        </AnimatedSection>
   )
 }
 

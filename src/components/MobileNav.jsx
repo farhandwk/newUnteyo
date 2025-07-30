@@ -7,7 +7,7 @@ const MobileNav = ({ isOpen, setIsOpen }) => {
   const companyItems = [
     { id: 1, title: "About Us", link: "/newUnteyo/about/" },
     { id: 2, title: "Our Program", link: "/newUnteyo/program/" },
-    { id: 3, title: "Careers", link: "#" },
+    { id: 3, title: "Careers", link: "/newUnteyo/careers/" },
     { id: 4, title: "Contact Us", link: "/newUnteyo/contact/" },
   ];
 
@@ -19,8 +19,8 @@ const MobileNav = ({ isOpen, setIsOpen }) => {
   ];
 
   const postItems = [
-    { id: 1, title: "Creative Media", link: "#" },
-    { id: 2, title: "Student News", link: "#" },
+    { id: 1, title: "Creative Media", link: "/newUnteyo/creativeMedia/" },
+    { id: 2, title: "Student News", link: "/newUnteyo/StudentNews/" },
   ];
   
   const sidebarVariants = {
