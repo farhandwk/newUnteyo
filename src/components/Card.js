@@ -10,12 +10,12 @@ import GerakRupa from "../assets/Events/gerakrupa.jpg"
 
 const Cards = [
     {
-        id: 1, // Unique identifier for the card
-        gambar : StrategiMahasiswa, // Image for the event
-        judul : "Strategi Menjadi Mahasiswa Unggulan, Bagi Mahasiswa Baru", // Event title
-        date : "NOV 15 2024", // Event date
-        loc : "Zoom Meeting", // Event location
-        link : "asada" // Link for event details
+        id: 1, 
+        gambar : StrategiMahasiswa, 
+        judul : "Strategi Menjadi Mahasiswa Unggulan, Bagi Mahasiswa Baru", 
+        date : "NOV 15 2024", 
+        loc : "Zoom Meeting", 
+        link : "asada" 
     },
     {
         id: 2,
