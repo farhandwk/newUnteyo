@@ -3,6 +3,14 @@ import React, { useEffect, useRef, useState, useCallback, useMemo } from "react"
 const WaveAnimation = () => {
   // Device detection
   const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
+  // State baru untuk menyimpan nilai 3 atau 5
+  const [yDivider, setYDivider] = useState(() => {
+    const width = window.innerWidth;
+    if (width >= 768 && width <= 1024) {
+      return 5;
+    }
+    return 3;
+  });
 
   // Refs for performance
   const waveContainerRef = useRef(null);
@@ -89,7 +97,7 @@ const WaveAnimation = () => {
       return {
         element: dot,
         x: position,
-        y: window.innerHeight / 3 + lineIndex * config.spacing,
+        y: window.innerHeight / yDivider + lineIndex * config.spacing,
         length: 0.004,
         amplitude,
         offset: lineIndex * (Math.PI / 3),
@@ -151,6 +159,13 @@ const WaveAnimation = () => {
     const handleResize = () => {
       const width = window.innerWidth;
       setIsMobile(width <= 768);
+      if (width < 768) {
+        setYDivider(3);
+      } else if (width >= 768 && width <= 1024) {
+        setYDivider(5);
+      } else { // lebih dari 1024
+        setYDivider(3);
+      }
     };
 
     // Initialize dots

@@ -28,7 +28,7 @@ function Landing() {
             borderRadius: '5vw',
             overflow: 'hidden'
         }}></div>
-        <WaveDot className='absolute '></WaveDot>
+        <WaveDot className=''></WaveDot>
         <div className='flex flex-col justify-center items-center pt-[20%] relative z-[1] gap-8 md:gap-2 md:pt-[10%] lg:gap-8'>
             <div className='flex flex-row justify-start pl-4 w-full lg:pl-48'>
                 <img src={like} className='w-16 relative lg:w-20'></img>
