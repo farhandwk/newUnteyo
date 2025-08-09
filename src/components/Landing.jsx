@@ -2,6 +2,7 @@ import React from 'react'
 import WaveDot from "./WaveDot"
 import like from "../assets/like.png";
 import love from "../assets/love.png";
+import light_1 from "../assets/light-1.png"
 import "../App.css"
 
 function Landing() {
@@ -17,7 +18,7 @@ function Landing() {
         background: 'linear-gradient(to bottom, black 85%, transparent)'
       }}
     >
-        <div style={{
+        {/* <div style={{
             background: 'radial-gradient(circle at 50% 50%, rgba(255, 165, 0, 1) 20%, rgba(255, 69, 0, 1) 80%)',
             position: 'absolute',
             width: '300px',
@@ -27,7 +28,8 @@ function Landing() {
             filter: 'blur(90px)',
             borderRadius: '5vw',
             overflow: 'hidden'
-        }}></div>
+        }}></div> */}
+        <img src={light_1} className='absolute top-[-25vh] left-[50vw] lg:top-[-60vh] lg:left-[70vw]'></img>
         <WaveDot className=''></WaveDot>
         <div className='flex flex-col justify-center items-center pt-[20%] relative z-[1] gap-8 md:gap-2 md:pt-[10%] lg:gap-8'>
             <div className='flex flex-row justify-start pl-4 w-full lg:pl-48'>

@@ -19,7 +19,7 @@ const AnimatedSection = ({ children }) => (
   return (
     <AnimatedSection>
       <div className="text-2xl text-white font-[helvetica]
-      lg:text-4xl w-full
+      lg:text-4xl w-full lg:pt-36
       ">
         <h2><strong>What is Unteyo Journey?</strong></h2>
       </div>
