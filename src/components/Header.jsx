@@ -13,10 +13,10 @@ import MobileNav from "./MobileNav";
 
 
 const companyItems = [
-  { id: 1, title: "About Us", link: "/newUnteyo/about/" },
-  { id: 2, title: "Our Program", link: "/newUnteyo/program/" },
-  { id: 3, title: "Careers", link: "/newUnteyo/careers/" },
-  { id: 4, title: "Contact Us", link: "/newUnteyo/contact/" },
+  { id: 1, title: "About Us", link: "/about/" },
+  { id: 2, title: "Our Program", link: "/program/" },
+  { id: 3, title: "Careers", link: "/careers/" },
+  { id: 4, title: "Contact Us", link: "/contact/" },
 ];
 
 const eventItems = [
