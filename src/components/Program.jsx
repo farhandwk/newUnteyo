@@ -20,7 +20,7 @@ function Program() {
         <div className='w-7/8 h-5/8 bg-white/10 rounded-[15px]'>
 
         </div>
-        <a href='/newUnteyo/program/' className="bg-white/10 text-center border border-white/20 text-white font-semibold px-6 py-3 pb-4 rounded-full hover:bg-white/20 transition-colors duration-300 w-full sm:w-auto
+        <a href='/program/' className="bg-white/10 text-center border border-white/20 text-white font-semibold px-6 py-3 pb-4 rounded-full hover:bg-white/20 transition-colors duration-300 w-full sm:w-auto
       lg:w-96
       ">
                     Dive Into Our Program

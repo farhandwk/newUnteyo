@@ -35,7 +35,7 @@ const AnimatedSection = ({ children }) => (
         </p>
         <img src={Laptop} className="w-56 self-end z-[2] relative lg:w-84" alt="Laptop" />
       </div>
-      <a href="/newUnteyo/about/" className="bg-white/10 border text-center border-white/20 text-white font-semibold px-6 py-3 pb-4 rounded-full hover:bg-white/20 transition-colors duration-300 w-full sm:w-auto
+      <a href="/about/" className="bg-white/10 border text-center border-white/20 text-white font-semibold px-6 py-3 pb-4 rounded-full hover:bg-white/20 transition-colors duration-300 w-full sm:w-auto
       lg:w-96
       ">
                     Get to Know About Us

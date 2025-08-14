@@ -27,8 +27,8 @@ const eventItems = [
 ];
 
 const postItems = [
-  { id: 1, title: "Creative Media", link: "/newUnteyo/creativeMedia/" },
-  { id: 2, title: "Student News", link: "/newUnteyo/StudentNews/" },
+  { id: 1, title: "Creative Media", link: "/creativeMedia/" },
+  { id: 2, title: "Student News", link: "/StudentNews/" },
 ];
 
 const socialMedia = [
