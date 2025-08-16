@@ -126,7 +126,7 @@ function Footer({ scrollToSection }) {
           </p>
           <div className="flex flex-wrap justify-center space-x-2 md:space-x-4 text-xs">
             <a
-              href="/AboutDeveloper"
+              href="/aboutDeveloper"
               className="text-gray-400 hover:text-white transition-colors"
             >
               About Developer
