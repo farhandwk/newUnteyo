@@ -45,10 +45,10 @@ function Footer({ scrollToSection }) {
     {
       title: "User Guide & Policies",
       items: [
-        { name: "Privacy Policy", link: "/#/privacy" },
-        { name: "Terms and Condition", link: "/#/terms" },
-        { name: "Cookie Policy", link: "/#/cookies" },
-        { name: "Recruitment Privacy", link: "/#/recruitment" },
+        { name: "Privacy Policy", link: "/privacy" },
+        { name: "Terms and Condition", link: "/terms" },
+        { name: "Cookie Policy", link: "/cookies" },
+        { name: "Recruitment Privacy", link: "/recruitment" },
       ],
     },
   ];
@@ -126,7 +126,7 @@ function Footer({ scrollToSection }) {
           </p>
           <div className="flex flex-wrap justify-center space-x-2 md:space-x-4 text-xs">
             <a
-              href="/#/AboutDeveloper"
+              href="/AboutDeveloper"
               className="text-gray-400 hover:text-white transition-colors"
             >
               About Developer
