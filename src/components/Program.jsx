@@ -21,7 +21,7 @@ const AnimatedSection = ({ children }) => (
     whileInView={{ opacity: 1, y: 0 }} 
     viewport={{ once: true, amount: 0.3 }} 
     transition={{ duration: 0.8, ease: "easeOut" }}
-    className='w-screen h-screen pt-12 flex flex-col items-center justify-center p-8 font-[helvetica] flex flex-col items-center justify-center gap-8 md:h-auto'
+    className='w-screen h-screen mt-36 flex flex-col items-center justify-center p-8 font-[helvetica] flex flex-col items-center justify-center gap-8 md:h-auto'
   >
     {children}
   </motion.section>

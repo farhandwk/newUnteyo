@@ -122,7 +122,7 @@ function PastEvent() {
       
       
   return (
-    <section className='w-screen h-auto p-4 font-[helvetica] flex flex-col items-center justify-center gap-8 pt-36 lg:pt-40'>
+    <section className='w-screen h-auto p-4 font-[helvetica] flex flex-col items-center justify-center gap-8 pt-18 lg:pt-40'>
         <h2 className='text-white text-2xl lg:text-4xl'><strong>Past Events</strong></h2>
         <div className='w-7/8 h-6/8 pt-6 bg-white/10 rounded-[15px] flex flex-col items-center justify-center lg:pt-18'>
             {/* Carousel Section */}
