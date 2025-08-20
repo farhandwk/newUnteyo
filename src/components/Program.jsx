@@ -21,7 +21,7 @@ const AnimatedSection = ({ children }) => (
     whileInView={{ opacity: 1, y: 0 }} 
     viewport={{ once: true, amount: 0.3 }} 
     transition={{ duration: 0.8, ease: "easeOut" }}
-    className='w-screen h-screen pt-12 flex flex-col items-center justify-center p-8 font-[helvetica] flex flex-col items-center justify-center gap-8'
+    className='w-screen h-screen pt-12 flex flex-col items-center justify-center p-8 font-[helvetica] flex flex-col items-center justify-center gap-8 md:h-auto'
   >
     {children}
   </motion.section>
@@ -31,10 +31,10 @@ function Program() {
   return (
     <AnimatedSection className=''>
         <h2 className='text-white text-2xl lg:text-4xl'><strong>Program</strong></h2>
-        <div className='bg-white/10 rounded-[15px] grid grid-cols-2 gap-4 p-8'>
+        <div className='bg-white/10 rounded-[15px] flex flex-row flex-wrap justify-around gap-4 p-8'>
           {program.map((item) =>(
-          <div key={item.id} className={`w-auto rounded-[20px] flex flex-col items-center justify-center ${item.id === 5 ? "col-span-2" : ""}`}>
-            <img src={item.img} className='w-32'></img>
+          <div key={item.id} className={`w-auto rounded-[20px] flex flex-col items-center justify-center`}>
+            <img src={item.img} className='w-32 rounded-[15px] md:w-56'></img>
             <span className='text-white font-semibold text-sm'>{item.text}</span>
           </div>
           ))}
