@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Laptop from '../assets/laptopHal1.png';
+import what_is from "../assets/WHAT-IS.png"
 
 function About() {
 
@@ -33,7 +33,7 @@ const AnimatedSection = ({ children }) => (
           <br/>
           Addresses academic and non-academic issues affecting students, with a focus on problem solving and creating real impact.
         </p>
-        <img src={Laptop} className="w-56 self-end z-[2] relative lg:w-84" alt="Laptop" />
+        <img src={what_is} className="w-48 self-end z-[2] relative lg:w-76" alt="Laptop" />
       </div>
       <a href="/about/" className="bg-white/10 border text-center border-white/20 text-white font-semibold px-6 py-3 pb-4 rounded-full hover:bg-white/20 transition-colors duration-300 w-full sm:w-auto
       lg:w-96
