@@ -99,7 +99,8 @@ function EventComing() {
     
   return (
     <AnimatedSection>
-            <div className="text-center mb-8">
+            {/* Jika Ada Event */}
+            {/* <div className="text-center mb-8">
                 <h1 className="text-2xl md:text-4xl text-white lg:text-4xl"><strong>Event Is Coming</strong></h1>
             </div>
             <InteractiveGlassCard />
@@ -113,6 +114,12 @@ function EventComing() {
                 <button className="bg-transparent border border-white/40 text-white/80 font-semibold px-6 py-3 rounded-full hover:bg-white/10 hover:text-white transition-colors duration-300 w-full sm:w-auto">
                     Contact Admin
                 </button>
+            </div> */}
+
+            {/* JIka Tidak Ada Event */}
+            <div className='font-[helvetica] text-center mb-8 w-full h-full flex flex-col items-center justify-center'>
+              <h1 className="text-2xl md:text-4xl text-white lg:text-4xl pt-24 pb-18"><strong>Event Is Coming</strong></h1>
+              <p className='w-78 h-12 md:h-16 md:w-96 p-0 border-2 border-white rounded-full text-1xl md:text-3xl text-white lg:text-3xl flex items-center justify-center'>Stay Tune</p>
             </div>
         </AnimatedSection>
   )
