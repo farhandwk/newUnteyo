@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import anggotabaru from "../assets/anggotabaru.png";
 import Terai from "../assets/LogoTerai.png";
 import Hubungins from "../assets/LogoHubung'ins.png";
 import Perspektif from "../assets/LogoPerspektif.png";
+import Sigma from "../assets/LogoSigma.png"
+import Tribes from "../assets/LogoTribes.png"
+import UCH from "../assets/LogoUCH.png"
 import "../App.css"
+
+// 1. Kita ubah data partner menjadi sebuah array of objects agar lebih mudah dikelola
+const partnerLogos = [
+  { id: 'terai', src: Terai, alt: 'Terai'},
+  { id: 'perspektif', src: Perspektif, alt: 'Perspektif'},
+  { id: 'sigma', src: Sigma, alt: 'Sigma'},
+  { id: 'tribes', src: Tribes, alt: 'Tribes'},
+  { id: 'uch', src: UCH, alt: 'UCH'},
+];
 
 function Connect() {
   const containerVariants = {
@@ -25,6 +37,19 @@ function Connect() {
       opacity: 1,
       transition: { duration: 0.6 },
     },
+  };
+
+  const [activeLogoId, setActiveLogoId] = useState(null);
+
+  // 3. Buat fungsi untuk menangani klik pada logo
+  const handleLogoClick = (id, event) => {
+    event.stopPropagation(); // Mencegah klik menyebar ke background
+    setActiveLogoId(id === activeLogoId ? null : id); // Jika logo yang sama diklik lagi, nonaktifkan
+  };
+
+  // 4. Buat fungsi untuk menangani klik di background untuk menonaktifkan semua
+  const handleBackgroundClick = () => {
+    setActiveLogoId(null);
   };
 
   return (
@@ -91,17 +116,19 @@ function Connect() {
               <h3 className="text-xl font-semibold text-white mb-4">
                 Partner Us:
               </h3>
-              <div className="flex space-x-6 justify-center items-center">
-                <img
-                  src={Terai}
-                  alt="Terai"
-                  className="w-24 grayscale hover:grayscale-0 active:grayscale-0 focus:grayscale-0 transition-all duration-300"
-                />
-                <img
-                  src={Perspektif}
-                  alt="Perspektif"
-                  className="perspektif brightness-50 w-24 h-9 grayscale hover:grayscale-0 hover:brightness-100 active:grayscale-0 active:brightness-100 focus:grayscale-0 focus:brightness-100 transition-all duration-300"
-                />
+              <div className="flex space-x-6 justify-center items-center flex-wrap">
+                {/* 5. Render logo dari array menggunakan .map() */}
+                {partnerLogos.map((logo) => (
+                  <img
+                    key={logo.id}
+                    src={logo.src}
+                    alt={logo.alt}
+                    onClick={(e) => handleLogoClick(logo.id, e)}
+                    className={`w-24 transition-all duration-300 ${
+                      activeLogoId === logo.id ? 'grayscale-0' : 'grayscale'
+                    } hover:grayscale-0 active:grayscale-0 focus:grayscale-0`}
+                  />
+                ))}
               </div>
             </motion.div>
           </div>

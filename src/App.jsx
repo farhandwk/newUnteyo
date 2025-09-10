@@ -13,7 +13,6 @@ import Footer from "./components/Footer"
 import './App.css';
 
 function App() {
-  // 2. Buat sebuah ref untuk elemen target kita
   const scrollTargetRef = useRef(null);
   const nextSectionRef = useRef(null)
 
