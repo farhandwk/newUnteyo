@@ -15,17 +15,18 @@ import './App.css';
 function App() {
   // 2. Buat sebuah ref untuk elemen target kita
   const scrollTargetRef = useRef(null);
+  const nextSectionRef = useRef(null)
 
   return (
     <main className="w-full bg-black max-w-screen">
       <Header></Header>
-      <Landing />
+      <Landing scrollToSection={nextSectionRef}/>
 
       {/* 3. Pasang 'ref' di sini dan berikan ke BackgroundScroll sebagai prop */}
       <div ref={scrollTargetRef} className="relative isolate">
         <BackgroundScroll targetRef={scrollTargetRef} />
         <div className="relative z-10">
-          <About />
+          <About ref={nextSectionRef}/>
           <Program />
           <EventComing/>
           <PastEvent/>

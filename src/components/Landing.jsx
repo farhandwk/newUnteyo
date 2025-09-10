@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import WaveDot from "./WaveDot"
 import like from "../assets/like.png";
 import love from "../assets/love.png";
 import light_1 from "../assets/light-1.png"
 import "../App.css"
 
-function Landing() {
-    const twinimg = [
-        {id: 1, img: like, alt: "like"},
-        {id: 2, img: love, alt: "love"},
-    ]
+function Landing({ scrollToSection }) {
+    const handleScroll = () => {
+    // 3. Gunakan ref yang diterima untuk scroll ke elemen tujuan
+    scrollToSection.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <section className='text-[white] w-[100vw] h-screen flex flex-col justify-center p-4  overflow-hidden relative overflow-hidden'
@@ -48,7 +49,7 @@ function Landing() {
         lg:w-[35%] lg:h-[60px] lg:mt-[2%] lg:rounded-[15px]  font-[helvetica] cursor-pointer
         ' style={{
             transition: "all 0.5s"
-        }}>Explore Our Journey</button>
+        }} onClick={handleScroll}>Explore Our Journey</button>
     </section>
   )
 }
