@@ -214,7 +214,7 @@ function PastEvent() {
         <button className="bg-white/10 border border-white/20 text-white font-semibold px-6 py-3 pb-4 rounded-full hover:bg-white/20 transition-colors duration-300 w-[90%] sm:w-auto
       lg:w-96
       ">
-                    <a href='https://event.unteyojourney.com/index.php'>Get to Know About Us</a>
+                    <a href='https://event.unteyojourney.com/index.php'>Dive Into Our Program</a>
                 </button>
     </section>
   )
