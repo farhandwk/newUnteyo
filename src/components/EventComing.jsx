@@ -89,7 +89,7 @@ function EventComing() {
       whileInView={{ opacity: 1, y: 0 }} 
       viewport={{ once: true, amount: 0.3 }} 
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className='w-full h-full mt-12 flex flex-col items-center justify-center p-12 gap-2 pt-36 lg:min-h-screen lg:pt-40'
+      className='w-full h-full flex flex-col items-center justify-center p-12 gap-2  lg:min-h-screen'
     >
       {children}
     </motion.section>

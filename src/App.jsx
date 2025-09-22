@@ -4,6 +4,7 @@ import { useRef } from 'react'; // 1. Impor useRef
 import Header from "./components/Header"
 import Landing from './components/Landing';
 import About from './components/About';
+import ServicesSection from './components/ServicesSection';
 import Program from './components/Program';
 import Connect from './components/Connect';
 import BackgroundScroll from './components/BackgroundScroll';
@@ -26,6 +27,7 @@ function App() {
         <BackgroundScroll targetRef={scrollTargetRef} />
         <div className="relative z-10">
           <About ref={nextSectionRef}/>
+          <ServicesSection />
           <Program />
           <EventComing/>
           <PastEvent/>
