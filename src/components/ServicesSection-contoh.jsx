@@ -56,7 +56,7 @@ export default function ServicesSection() {
       whileInView={{ opacity: 1, y: 0 }} 
       viewport={{ once: true, amount: 0.3 }} 
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className='w-screen h-screen mt-72 md:mt-36 flex flex-col items-center justify-center p-8 font-[helvetica] flex flex-col items-center justify-center gap-0 md:h-auto'
+      className='max-w-screen w-screen h-screen mt-72 md:mt-36 flex flex-col items-center justify-center p-8 font-[helvetica] flex flex-col items-center justify-center gap-0 md:h-auto'
     >
       {children}
     </motion.section>
@@ -64,8 +64,6 @@ export default function ServicesSection() {
 
   return (
     <AnimatedSection
-      id="services"
-      className="relative container mx-auto max-w-7xl px-4 sm:px-6 pt-10 pb-16 scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32"
       style={{ fontFamily: '"Helvetica Now", Helvetica, Arial, sans-serif' }}
     >
       {/* BACKDROP */}
