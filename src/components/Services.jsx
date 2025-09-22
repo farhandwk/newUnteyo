@@ -116,6 +116,25 @@ function Services() {
           </AnimatedArticle>
         ))}
       </div>
+
+      <div className="flex justify-center mt-12">
+              <a
+                href="https://wa.me/62881023513057"
+                aria-label="Konsultasi Gratis"
+                className="inline-flex items-center gap-3 rounded-[15px] bg-white/10 px-8 py-3 text-white font-semibold text-lg shadow-lg transition-transform duration-200 hover:scale-105 focus:outline-none focus:ring-4 animate-pulse-slow"
+                style={{ animationTimingFunction: "ease-in-out" }}
+              >
+                <PhoneCall className="w-5 h-5 opacity-90" />
+                <span>Free Consultation</span>
+              </a>
+            </div>
+      
+            {/* Custom animation for pulse slow */}
+            <style>{`
+              .animate-pulse-slow {
+                animation: pulse-slow 3s infinite;
+              }
+            `}</style>
     </AnimatedSection>
   )
 }
