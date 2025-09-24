@@ -14,7 +14,7 @@ function Services() {
         {
           title: "Podcast Production",
           description:
-            "Professional podcast production with superior audio quality and engaging content flow. We also provide ready-to-upload short-form clips (shorts/highlights) for Instagram, TikTok, and Reels.",
+            "Professional podcast production with superior audio quality and engaging content flow. We also provide ready-to-upload short-form clips (shorts/highlights) for Youtube, TikTok, and Reels.",
           image: podcastProd,
           docImage: dokPodcast,
           chips: ["Pre-production", "Recording", "Editing", "Clipper"],
